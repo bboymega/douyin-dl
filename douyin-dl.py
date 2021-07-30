@@ -9,11 +9,11 @@ import urllib.parse
 import urllib.request
 
 parser = argparse.ArgumentParser()
-parser.add_argument("url", help="URL of Video Page", type=str, dest="url_vid")
+parser.add_argument("url", help="URL of Video Page", type=str)
 parser.add_argument("-o", "--output", default='./',dest="output", help="Set Output Location", action="store")
 args=parser.parse_args()
 output_lo=args.output
-url=args.url_vid
+url=args.url
 
 if(output_lo[len(output_lo)-1] != '/'):
     output_lo=output_lo+'/'
