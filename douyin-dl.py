@@ -8,13 +8,12 @@ from bs4 import BeautifulSoup
 import urllib.parse
 import urllib.request
 
-#url="https://www.douyin.com/video/6989619081464843558/"
-url="https://v.douyin.com/ecahnrJ/"
 parser = argparse.ArgumentParser()
-parser.add_argument("url", help="URL of Video Page", type=str)
+parser.add_argument("url", help="URL of Video Page", type=str, dest="url_vid")
 parser.add_argument("-o", "--output", default='./',dest="output", help="Set Output Location", action="store")
 args=parser.parse_args()
 output_lo=args.output
+url=args.url_vid
 
 if(output_lo[len(output_lo)-1] != '/'):
     output_lo=output_lo+'/'
