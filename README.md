@@ -1,5 +1,5 @@
 # douyin-dl
-Command Line Douyin Downloader. Output as original video without watermarks.
+Command Line Douyin Downloader. Archiving as original video without watermarks.
 
 # Usage:
 ```
