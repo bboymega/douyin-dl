@@ -1,17 +1,10 @@
 #!/usr/local/bin/python3
 import requests
 import json
-import ffmpeg
 import argparse
-from pathlib import Path
-from getpass import getpass
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
-from io import StringIO
-import sys, getopt
 from bs4 import BeautifulSoup
-import re
-import os
 import urllib.parse
 import urllib.request
 
