@@ -22,4 +22,5 @@ urllib
 bs4
 json
 argparse
+re
 ```
