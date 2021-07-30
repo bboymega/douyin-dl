@@ -25,4 +25,4 @@ argparse
 re
 ```
  # Disclaimer
- This program is for personal use only. Do not use it for commertial purpose or reuploading.
+ This program is for personal use only. Do not use it for commertial purpose or reuploading or anything that might result in a copyright strike.
