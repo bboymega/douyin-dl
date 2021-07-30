@@ -3,7 +3,7 @@ Command Line Douyin Downloader. Output as original video without watermarks.
 
 # Usage:
 ```
-usage: douyin-dl.py [-o OUTPUT] url
+usage: dydl.py [-o OUTPUT] url
 
 positional arguments:
   url                   URL of Video Page
