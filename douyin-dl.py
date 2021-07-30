@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/local/bin/python3
 import requests
 import json
 import argparse
@@ -7,6 +7,7 @@ requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 from bs4 import BeautifulSoup
 import urllib.parse
 import urllib.request
+import re
 
 parser = argparse.ArgumentParser()
 parser.add_argument("url", help="URL of Video Page", type=str)
@@ -14,6 +15,7 @@ parser.add_argument("-o", "--output", default='./',dest="output", help="Set Outp
 args=parser.parse_args()
 output_lo=args.output
 url=args.url
+url=re.search("(?P<url>https?://[^\s]+)", url).group("url")
 
 if(output_lo[len(output_lo)-1] != '/'):
     output_lo=output_lo+'/'
@@ -44,6 +46,9 @@ soup = BeautifulSoup(page.text,features="html.parser")
 
 script=soup.find(id="RENDER_DATA")
 title=soup.find("title").string[:-6]
+invalid = '<>:"/\|?*'
+for char in invalid:
+    title = title.replace(char,'-')
 
 for jsons in script:
     prettified_json=json.loads(urllib.parse.unquote(jsons))
