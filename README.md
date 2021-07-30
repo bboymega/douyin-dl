@@ -24,3 +24,5 @@ json
 argparse
 re
 ```
+ # Disclaimer
+ This program is for personal use only. Do not use it for commertial purpose or reuploading.
